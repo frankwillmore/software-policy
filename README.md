@@ -2,13 +2,14 @@
 
 ## General policies
 
-* If you installed it, you're responsible for it. 
+* Only users in software Linux group can install to non-user areas.
+* If you installed it, you're responsible for it. You're the file owner and first point of contact. 
 * Clean up after yourself. If you made some directories or files that don't need to be there, remove them. 
 * Leverage what already exists. 
 * Default versions change infrequently and deliberately
 * Any software which was once a default on the system will always be available on the system
-
-
+* The *spack* service user should own settings, not particular pieces of software. 
+ 
 ## Where software lives
 
 The primary areas where software is installed at ALCF are:
@@ -18,58 +19,35 @@ The primary areas where software is installed at ALCF are:
 * **spack** This is the installation of system spack, at /soft/spack, owned by user spack and writeable by software group. It is intended to support installation of ECP software, their dependencies as well as automation *via* CI. It is intended to be made useful even after ECP winds down. 
 * **user and project space** User directories (gpfs) and project directories (lustre) will hold software built by users, with or without support from ALCF staff. 
 
-## /soft
+### Cray PE ISO
+### /soft
 
 This area currently consists of contributions by stakeholders from across ALCF, in particular:
-
 Current Layout and Proposed Layout: 
-
 *?/soft/accttools - owned by harms/software, last written Feb 6, 2019 
-
 /soft/applications - various owners, mostly MD applications, frequent updates 
-
 /soft/buildtools - cmake, elfutils, and trackdeps, regular updates 
-
 /soft/cobalt - owned by prich/catalyst, last written Dec 2018 
-
 /soft/compilers - go, intel, llvm; verious owners 
-
 /soft/condor - owned by acherry/software, last written Mar 2017 
-
 /soft/data-transfer – owned by acherry, software; globus-6.0 
-
 /soft/datascience - many packages, many owners, mostly software group 
-
 /soft/debuggers - owned by rloy, various groups  
-
 *?/soft/environment - owned by rloy, mostly modules, plus bin/whatami, empty lmod dir 
-
 */soft/gbtest - owned by gabrown, empty 
-
 /soft/interpreters - owned by wscullin; python and julia versions, not the intel ones 
-
 /soft/libraries - various. Includes boost, bolt, memkind-static, etc 
-
 /soft/licensing - owned by acherry 
-
 /soft/packaging - william’s spack installation 
-
 /soft/perftools - owned by rloy, contains darshan, hpctoolkit, tau, etc. 
-
 /soft/spack - owned by spack/software; home directory for spack service user 
-
 *?/soft/tools - owned by harms, texlive is only entry 
-
 */soft/versioning owned by tjackson, contains subversion only 
-
 /soft/visualization - visualization apps, owned by root/software  
-
- 
 
 *Starred items to be removed or *? folded into other area 
 
-
-## Spack
+### Spack
 
 Definitions: 
 
